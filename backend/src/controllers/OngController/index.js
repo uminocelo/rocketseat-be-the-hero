@@ -8,6 +8,7 @@ module.exports = {
     },
     
     async create(req, res){
+        console.log('ong/create', req.body)
         const {name, email, whatsapp, city, uf}  = req.body;
         const id  = crypto.randomBytes(4).toString('HEX');
         await connection('ongs').insert({
